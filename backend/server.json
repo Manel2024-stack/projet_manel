@@ -1,0 +1,23 @@
+{
+    "server": {
+      "port": 3000,
+      "host": "localhost",
+      "env": "development"
+    },
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "username": "admin",
+      "password": "secret",
+      "database_name": "myappdb"
+    },
+    "logging": {
+      "level": "info",
+      "file": "logs/server.log"
+    },
+    "cors": {
+      "enabled": true,
+      "allowedOrigins": ["http://localhost:4200", "https://example.com"]
+    }
+  }
+  

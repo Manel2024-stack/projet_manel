@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend  # Utiliser le dossier backend pour construire l'image
+    ports:
+      - "3000:3000"  # Mappe le port 3000 du conteneur au port 3000 de la machine hôte
+    networks:
+      - my_network
+
+  frontend:
+    build: ./frontend  # Utiliser le dossier frontend pour construire l'image
+    ports:
+      - "8010:80"  # Mappe le port 80 du conteneur au port 80 de la machine hôte
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

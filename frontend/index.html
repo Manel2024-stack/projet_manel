@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to the Frontend!</h1>
+  <p>Backend response: <span id="backend-response">Loading...</span></p>
+  <script>
+    fetch('http://backend:3000')
+      .then(response => response.text())
+      .then(data => document.getElementById('backend-response').textContent = data);
+  </script>
+</body>
+</html>
